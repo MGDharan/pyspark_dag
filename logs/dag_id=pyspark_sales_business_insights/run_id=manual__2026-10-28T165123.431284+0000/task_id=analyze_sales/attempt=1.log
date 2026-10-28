@@ -1,0 +1,73 @@
+{"timestamp":"2026-10-28T16:51:26.592485Z","level":"info","event":"::group::Pre Execute","logger":"task","filename":"task_runner.py","lineno":2412}
+{"timestamp":"2026-10-28T16:51:26.820123Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags, apache-airflow-providers-common-sql-example-dags, apache-airflow-providers-standard-example-dags","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":304}
+{"timestamp":"2026-10-28T16:51:26.834224Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/sales_insights_dag.py","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":460}
+{"timestamp":"2026-10-28T16:51:27.730267Z","level":"info","event":"Worker startup parse complete","bundle_name":"dags-folder","bundle_version":null,"dag_file":"sales_insights_dag.py","dag_id":"pyspark_sales_business_insights","bundle_prepare_ms":23,"dag_file_parse_ms":895,"task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"task","filename":"task_runner.py","lineno":1073}
+{"timestamp":"2026-10-28T16:51:27.906100Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:51:27.910627Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:51:27.914989Z","level":"info","event":"Current task name:analyze_sales","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:51:27.920116Z","level":"info","event":"Dag name:pyspark_sales_business_insights","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:51:27.906245Z","level":"info","event":"::endgroup::","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"task","filename":"task_runner.py","lineno":2232}
+{"timestamp":"2026-10-28T16:51:38.193181Z","level":"error","event":"Setting default log level to \"WARN\".","logger":"task.stderr"}
+{"timestamp":"2026-10-28T16:51:38.197776Z","level":"error","event":"To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).","logger":"task.stderr"}
+{"timestamp":"2026-10-28T16:51:39.131759Z","level":"error","event":"26/10/28 16:51:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable","logger":"task.stderr"}
+{"timestamp":"2026-10-28T16:52:20.032404Z","level":"info","event":"SOURCE SALES DATA","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.164652Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.171549Z","level":"info","event":"|order_id|   product|    region|quantity|unit_price|order_date|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.182734Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.190003Z","level":"info","event":"|     101|    Laptop|   Chennai|       2|     50000|2026-10-01|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.193825Z","level":"info","event":"|     102|    Mobile|Coimbatore|       3|     15000|2026-10-02|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.204833Z","level":"info","event":"|     103|    Laptop|Coimbatore|       1|     50000|2026-10-03|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.216263Z","level":"info","event":"|     104|Headphones|   Chennai|       5|      2000|2026-10-04|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.220840Z","level":"info","event":"|     105|    Mobile|   Chennai|       2|     15000|2026-10-05|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.225926Z","level":"info","event":"|     106|    Laptop|   Madurai|       2|     50000|2026-10-06|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.229324Z","level":"info","event":"|     107|Headphones|Coimbatore|       4|      2000|2026-10-07|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.232976Z","level":"info","event":"|     108|    Mobile|   Madurai|       3|     15000|2026-10-08|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.235909Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.239280Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:22.667936Z","level":"info","event":"CLEANED SALES DATA","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.697742Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+-------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.700897Z","level":"info","event":"|order_id|   product|    region|quantity|unit_price|order_date|revenue|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.704834Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+-------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.713039Z","level":"info","event":"|     101|    Laptop|   Chennai|       2|     50000|2026-10-01| 100000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.716271Z","level":"info","event":"|     102|    Mobile|Coimbatore|       3|     15000|2026-10-02|  45000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.725873Z","level":"info","event":"|     103|    Laptop|Coimbatore|       1|     50000|2026-10-03|  50000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.730825Z","level":"info","event":"|     104|Headphones|   Chennai|       5|      2000|2026-10-04|  10000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.736107Z","level":"info","event":"|     105|    Mobile|   Chennai|       2|     15000|2026-10-05|  30000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.740902Z","level":"info","event":"|     106|    Laptop|   Madurai|       2|     50000|2026-10-06| 100000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.753298Z","level":"info","event":"|     107|Headphones|Coimbatore|       4|      2000|2026-10-07|   8000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.763397Z","level":"info","event":"|     108|    Mobile|   Madurai|       3|     15000|2026-10-08|  45000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.777425Z","level":"info","event":"+--------+----------+----------+--------+----------+----------+-------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:32.793785Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:33.265395Z","level":"info","event":"REVENUE BY REGION","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.026464Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.041427Z","level":"info","event":"|    region|total_revenue|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.059420Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.070623Z","level":"info","event":"|   Madurai|       145000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.082595Z","level":"info","event":"|   Chennai|       140000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.097244Z","level":"info","event":"|Coimbatore|       103000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.115478Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.120324Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:43.473379Z","level":"info","event":"REVENUE BY PRODUCT","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.001073Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.050324Z","level":"info","event":"|   product|total_revenue|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.113504Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.120820Z","level":"info","event":"|    Laptop|       250000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.130407Z","level":"info","event":"|    Mobile|       120000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.134954Z","level":"info","event":"|Headphones|        18000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.150074Z","level":"info","event":"+----------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:50.153846Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:51.017590Z","level":"info","event":"MONTHLY REVENUE","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.671633Z","level":"info","event":"+-------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.679859Z","level":"info","event":"|  month|total_revenue|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.693118Z","level":"info","event":"+-------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.700681Z","level":"info","event":"|2026-10|       388000|","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.714700Z","level":"info","event":"+-------+-------------+","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:52:57.726078Z","level":"info","event":"","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:53:18.310311Z","level":"info","event":"SALES ANALYSIS COMPLETED SUCCESSFULLY","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:53:19.055660Z","level":"info","event":"Done. Returned value was: None","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"airflow.task.operators.airflow.providers.standard.operators.python.PythonOperator","filename":"python.py","lineno":233}
+{"timestamp":"2026-10-28T16:53:19.057723Z","level":"info","event":"::group::Post Execute","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"task","filename":"task_runner.py","lineno":1580}
+{"timestamp":"2026-10-28T16:53:19.129173Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:53:19.132531Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:53:19.135452Z","level":"info","event":"Task operator:<Task(PythonOperator): analyze_sales>","logger":"task.stdout"}
+{"timestamp":"2026-10-28T16:53:19.131781Z","level":"info","event":"::endgroup::","dag_id":"pyspark_sales_business_insights","task_id":"analyze_sales","map_index":-1,"ti_id":"01a1836c-6d56-7032-a51c-1fdea3aa3e90","try_number":1,"run_id":"manual__2026-10-28T16:51:23.431284+00:00","logger":"task","filename":"task_runner.py","lineno":2379}
+{"timestamp":"2026-10-28T16:53:19.699245Z","level":"error","event":"\r[Stage 0:>                                                          (0 + 0) / 1]\r\r[Stage 0:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 1:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 2:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 3:>                                                          (0 + 1) / 1]\r\r[Stage 5:>                                                          (0 + 1) / 1]\r\r                                                                                \r\r[Stage 6:>                                                          (0 + 1) / 1]\r\r[Stage 6:===========================================================(1 + 0) / 1]\r\r[Stage 8:>                                                          (0 + 1) / 1]\r\r[Stage 11:>                                                         (0 + 1) / 1]\r\r                                                                                \r\r[Stage 12:>                                                         (0 + 1) / 1]\r\r[Stage 14:>                                                         (0 + 1) / 1]\r\r                                                                                \r\r[Stage 18:>                                                         (0 + 1) / 1]\r\r[Stage 20:>                                                         (0 + 1) / 1]\r\r[Stage 20:==========================================================(1 + 0) / 1]\r\r                                                                                \r\r[Stage 24:>                                                         (0 + 1) / 1]\r\r[Stage 26:>                                                         (0 + 1) / 1]\r\r[Stage 29:>                                                         (0 + 1) / 1]\r\r                                                                                \r\r[Stage 36:>                                                         (0 + 1) / 1]\r\r                                                                                \r\r[Stage 49:>                                                         (0 + 1) / 1]\r\r                                                                                \r\r[Stage 50:>                                                         (0 + 1) / 1]\r\r[Stage 55:>                                                         (0 + 1) / 1]","logger":"task.stderr"}
